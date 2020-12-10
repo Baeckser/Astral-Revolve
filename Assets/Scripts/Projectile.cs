@@ -5,6 +5,8 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public GameObject projectile;
+    public float speed = 3f;
+    public AudioSource Explosion; 
 
     // Start is called before the first frame update
     void Start()
@@ -15,7 +17,7 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(new Vector3(0, -3 * Time.deltaTime, 0));
+        { transform.position += (-speed * Time.deltaTime * transform.up); }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -24,10 +26,11 @@ public class Projectile : MonoBehaviour
             Destroy(collision.gameObject);
             Destroy(projectile);
             GameManager.playGame = true;
+            Explosion.Play();
         }
         if(collision.gameObject.tag == "Finish")
         {
-            Destroy(projectile);
+            Destroy(projectile);    
         }
     }
 

@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     {
         movement();
         fireProjectile();
+        
     }
     
     void movement()
@@ -35,7 +36,7 @@ public class Player : MonoBehaviour
     }
     void fireProjectile()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && projectileClone == null)
+        if(Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log(new Vector3(this.transform.position.x, this.transform.position.y + 0.6f, 0));
             projectileClone = Instantiate(projectile, new Vector3(this.transform.position.x, this.transform.position.y + 0.6f, 0), this.transform.rotation) as GameObject;

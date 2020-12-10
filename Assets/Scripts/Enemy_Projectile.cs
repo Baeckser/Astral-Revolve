@@ -5,23 +5,26 @@ using UnityEngine;
 public class Enemy_Projectile : MonoBehaviour
 {
     public GameObject enemyProjectile;
-    Vector3 respawn = new Vector3(-9, -3, 0);
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float speed = 5f;
+    
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(new Vector3(0, -3 * Time.deltaTime, 0));
+        { transform.position += (-speed * Time.deltaTime * transform.up); }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.transform.position = respawn;
+            
+            Player_2 temp = collision.gameObject.GetComponent<Player_2>();
+            if (temp != null)
+            {
+                temp.Respawn();
+            }
+
+           
             Destroy(enemyProjectile);
             GameManager.playGame = false;
         }
