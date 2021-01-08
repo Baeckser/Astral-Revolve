@@ -8,23 +8,26 @@ public class Enemy : MonoBehaviour
     public GameObject enemy;
     public GameObject enemyProjectile;
     public GameObject enemyProjectileClone;
+    public float timeBetweenBullets = 1f;
+    public float timeTilNextShot;
+    public Transform enemy_Gun;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        timeTilNextShot = Time.realtimeSinceStartup;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-            fireEnemyProjectile();
+            if (Time.realtimeSinceStartup > timeTilNextShot)
+                fireEnemyProjectile();
     }
     void fireEnemyProjectile()
     {
-        if (Random.Range(0f, 50f) < 1)
-        {
-            enemyProjectileClone = Instantiate(enemyProjectile, new Vector3(enemy.transform.position.x, enemy.transform.position.y - 0.6f, 0), enemy.transform.rotation) as GameObject;
-        }
+        Instantiate(enemyProjectile, enemy_Gun.position, transform.rotation);
+        timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBullets;
+            
     }
 }

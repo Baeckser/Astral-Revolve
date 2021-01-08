@@ -9,11 +9,16 @@ public class Follower : MonoBehaviour
 
     private void Update()
     {
-        
-        
-            distanceTravelled += speed * Time.deltaTime;
-            transform.position = Circular_Path.path.GetPointAtDistance(distanceTravelled);
-            
-        
+
+
+        distanceTravelled += speed * Time.deltaTime;
+        transform.position = Circular_Path.path.GetPointAtDistance(distanceTravelled);
+        Debug.Log(transform.position);
+
+
+
+
+
+
     }
 }
