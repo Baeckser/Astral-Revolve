@@ -13,21 +13,23 @@ public class Enemy_Projectile : MonoBehaviour
     {
         { transform.position -= (-speed * Time.deltaTime * transform.up); }
     }
+    
+    //Projectile behaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //Projectilie collision with the player
         if (collision.gameObject.tag == "Player")
         {
-            
             Player_2 temp = collision.gameObject.GetComponent<Player_2>();
             if (temp != null)
             {
                 temp.Respawn();
             }
-
-           
             Destroy(enemyProjectile);
             GameManager.playGame = false;
         }
+
+        //Destroying out of bounce projectiles
         if(collision.gameObject.tag == "Finish")
         {
             Destroy(enemyProjectile);

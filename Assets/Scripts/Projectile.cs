@@ -21,6 +21,7 @@ public class Projectile : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //Projectile collision with enemies
         if(collision.gameObject.tag == "Enemy")
         {
             Destroy(collision.gameObject);
@@ -28,6 +29,7 @@ public class Projectile : MonoBehaviour
             GameManager.playGame = true;
             Explosion.Play();
         }
+        //Destroying out of bounce projectiles
         if(collision.gameObject.tag == "Finish")
         {
             Destroy(projectile);    

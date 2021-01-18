@@ -9,21 +9,21 @@ public class Player_2 : MonoBehaviour
     public float speed = 5f;
     public float boost = 1.5f;
     public float timeBetweenBullets_1 = 0.5f;
-    public float timeBetweenBullets_2 = 0.5f;
-    public float timeBetweenBullets_3 = 0.5f;
+    //public float timeBetweenBullets_2 = 0.5f;
+    //public float timeBetweenBullets_3 = 0.5f;
     public float timeTilNextShot;
     public Projectile projectilePrefab;
-    public Projectile LaserPrefab;
+    //public Projectile LaserPrefab;
     public Transform OneEighty;
     public Transform Anchor;
     public Transform Weapon;
     public Transform Weapon_2;
-    public Transform quad_Shot;
-    public Transform Gun_2;
-    public Transform Gun_3;
-    public Transform Gun_4;
-    public Transform Gun_5;
-    public Transform Laser;
+    //public Transform quad_Shot;
+    //public Transform Gun_2;
+    //public Transform Gun_3;
+    //public Transform Gun_4;
+    //public Transform Gun_5;
+    //public Transform Laser;
     Vector3 Startrotation;
     Quaternion Rotation;
 
@@ -43,6 +43,7 @@ public class Player_2 : MonoBehaviour
         oneEighty();
     }
 
+    //Moving the Player ship
     void movement()
     {
         //Moving right
@@ -55,7 +56,7 @@ public class Player_2 : MonoBehaviour
                     if (Input.GetKey(KeyCode.LeftShift))
                     {
                         Anchor.Rotate(new Vector3(0, 0, Time.deltaTime * (speed * boost)));
-                        Energy_Bar.instance.UseEnergy(Time.deltaTime * 20);
+                        Energy_Bar.instance.UseEnergy(Time.deltaTime * 50);
                     }
                     else
                     {
@@ -74,7 +75,7 @@ public class Player_2 : MonoBehaviour
                     if (Input.GetKey(KeyCode.LeftShift))
                     {
                         Anchor.Rotate(new Vector3(0, 0, Time.deltaTime * (-speed * boost)));
-                        Energy_Bar.instance.UseEnergy(Time.deltaTime * 20);
+                        Energy_Bar.instance.UseEnergy(Time.deltaTime * 50);
                     }
                     else
                     {
@@ -86,6 +87,8 @@ public class Player_2 : MonoBehaviour
         }
         
     }
+    
+    //Turning the player ship around
     void oneEighty()
     {
         if (Input.GetKeyDown(KeyCode.DownArrow))
@@ -95,19 +98,19 @@ public class Player_2 : MonoBehaviour
     }
 
    
-
+    //Using the Player weapon(s)
     void fireProjectile()
     {
-            if (Input.GetKey("a"))
+            if (Input.GetKey(KeyCode.Space))
             {
                 Instantiate(projectilePrefab, Weapon.position, Anchor.rotation);
                 timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBullets_1;
-                Shot.Play();Instantiate(projectilePrefab, Weapon_2.position, Anchor.rotation);
+                Instantiate(projectilePrefab, Weapon_2.position, Anchor.rotation);
                 timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBullets_1;
                 Shot.Play();
-        }
+            }
             
-            if (Input.GetKey("s"))
+            /*if (Input.GetKey("s"))
             {
                 Instantiate(projectilePrefab, quad_Shot.position, Anchor.rotation);
                 Instantiate(projectilePrefab, Gun_2.position, Anchor.rotation);
@@ -125,11 +128,12 @@ public class Player_2 : MonoBehaviour
                 timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBullets_3; ;
                 Energy_Bar.instance.UseEnergy(Time.deltaTime * 30);
                 Shot.Play();
-            }
+            }*/
         
 
     }
 
+    //Respawn location
     public void Respawn()
     {
         Debug.Log(Anchor.rotation);
