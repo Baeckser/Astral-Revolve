@@ -28,6 +28,7 @@ public class WaveSpawner : MonoBehaviour
     public SpawnState state = SpawnState.counting;
 
     // Start is called before the first frame update
+    //Checks if spawnPoints have been assigned 
     void Start()
     {
         if (spawnPoints.Length == 0)
@@ -67,6 +68,7 @@ public class WaveSpawner : MonoBehaviour
         }
     }
 
+    //Checks if there are any waves left to instantiate 
     void WaveCompleted()
     {
         Debug.Log("Wave Completed");
@@ -84,7 +86,7 @@ public class WaveSpawner : MonoBehaviour
             nextWave++;
         }
     }
-
+    //Checking if there are any enemies left
     bool EnemyIsAlive ()
     {
         searchCountdown -= Time.deltaTime;
@@ -100,6 +102,7 @@ public class WaveSpawner : MonoBehaviour
         return true;
     }
 
+    //Coroutine for spawning a new wave
     IEnumerator SpawnWave(Wave _wave)
     {
         Debug.Log("Spawning Wave:" + _wave.name);
@@ -116,6 +119,7 @@ public class WaveSpawner : MonoBehaviour
         yield break;
     }
 
+    //Assigning a (random) spawnpoint to the next wave
     void SpawnEnemy (Transform _enemy)
     {
         Debug.Log("Spawning Enemy:" + _enemy.name);
