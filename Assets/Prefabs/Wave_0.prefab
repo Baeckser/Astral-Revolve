@@ -236,9 +236,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a820b784406ef44a98e24088b778478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
+  Type: 1
   MyPath: {fileID: 1046938890070180592}
-  Speed: 3
+  Speed: 5
   MaxDistanceToGoal: 0.1
 --- !u!114 &1046938889802412233
 MonoBehaviour:
@@ -267,12 +267,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1046938889802412235}
+  enemy_Gun: {fileID: 1046938890556420241}
   enemyProjectile: {fileID: 7687659760150459152, guid: 1707a68462bec4f498c748c6711a7540,
     type: 3}
   enemyProjectileClone: {fileID: 0}
-  timeBetweenBullets: 1
+  timeBetweenBullets: 2.5
   timeTilNextShot: 0
-  enemy_Gun: {fileID: 1046938890556420241}
+  startDelay: 2.5
 --- !u!1 &1046938889944358043
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,9 +450,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a820b784406ef44a98e24088b778478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
+  Type: 1
   MyPath: {fileID: 1046938891178870394}
-  Speed: 3
+  Speed: 5
   MaxDistanceToGoal: 0.1
 --- !u!114 &1046938890042040609
 MonoBehaviour:
@@ -480,12 +481,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1046938890042040611}
+  enemy_Gun: {fileID: 1046938890942433100}
   enemyProjectile: {fileID: 7687659760150459152, guid: 1707a68462bec4f498c748c6711a7540,
     type: 3}
   enemyProjectileClone: {fileID: 0}
-  timeBetweenBullets: 0.5
+  timeBetweenBullets: 2.5
   timeTilNextShot: 0
-  enemy_Gun: {fileID: 1046938890942433100}
+  startDelay: 2.5
 --- !u!1 &1046938890070180594
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,9 +746,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a820b784406ef44a98e24088b778478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
+  Type: 1
   MyPath: {fileID: 1046938890520892389}
-  Speed: 3
+  Speed: 5
   MaxDistanceToGoal: 0.1
 --- !u!114 &1046938890403476658
 MonoBehaviour:
@@ -775,12 +777,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1046938890403476620}
+  enemy_Gun: {fileID: 1046938889861460526}
   enemyProjectile: {fileID: 7687659760150459152, guid: 1707a68462bec4f498c748c6711a7540,
     type: 3}
   enemyProjectileClone: {fileID: 0}
-  timeBetweenBullets: 0.5
+  timeBetweenBullets: 2.5
   timeTilNextShot: 0
-  enemy_Gun: {fileID: 1046938889861460526}
+  startDelay: 2.5
 --- !u!1 &1046938890520892391
 GameObject:
   m_ObjectHideFlags: 0
@@ -1073,9 +1076,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a820b784406ef44a98e24088b778478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
+  Type: 1
   MyPath: {fileID: 1046938891041893892}
-  Speed: 3
+  Speed: 5
   MaxDistanceToGoal: 0.1
 --- !u!114 &1046938890729445846
 MonoBehaviour:
@@ -1104,12 +1107,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1046938890729445840}
+  enemy_Gun: {fileID: 1046938890785343561}
   enemyProjectile: {fileID: 7687659760150459152, guid: 1707a68462bec4f498c748c6711a7540,
     type: 3}
   enemyProjectileClone: {fileID: 0}
-  timeBetweenBullets: 0.5
+  timeBetweenBullets: 2.5
   timeTilNextShot: 0
-  enemy_Gun: {fileID: 1046938890785343561}
+  startDelay: 2.5
 --- !u!1 &1046938890862066468
 GameObject:
   m_ObjectHideFlags: 0

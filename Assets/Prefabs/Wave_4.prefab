@@ -989,7 +989,7 @@ PrefabInstance:
     - target: {fileID: 2052582483702057421, guid: 1b7e91f66e94bde4db65ce3f4269c1ac,
         type: 3}
       propertyPath: timeBetweenBullets
-      value: 0.5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2052582483702057421, guid: 1b7e91f66e94bde4db65ce3f4269c1ac,
         type: 3}
@@ -1165,7 +1165,7 @@ PrefabInstance:
     - target: {fileID: 2052582483702057421, guid: 1b7e91f66e94bde4db65ce3f4269c1ac,
         type: 3}
       propertyPath: timeBetweenBullets
-      value: 0.5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2052582483702057421, guid: 1b7e91f66e94bde4db65ce3f4269c1ac,
         type: 3}
@@ -1341,7 +1341,7 @@ PrefabInstance:
     - target: {fileID: 2052582483702057421, guid: 1b7e91f66e94bde4db65ce3f4269c1ac,
         type: 3}
       propertyPath: timeBetweenBullets
-      value: 0.5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2052582483702057421, guid: 1b7e91f66e94bde4db65ce3f4269c1ac,
         type: 3}
@@ -1517,7 +1517,7 @@ PrefabInstance:
     - target: {fileID: 2052582483702057421, guid: 1b7e91f66e94bde4db65ce3f4269c1ac,
         type: 3}
       propertyPath: timeBetweenBullets
-      value: 0.5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2052582483702057421, guid: 1b7e91f66e94bde4db65ce3f4269c1ac,
         type: 3}
@@ -1693,7 +1693,7 @@ PrefabInstance:
     - target: {fileID: 2052582483702057421, guid: 1b7e91f66e94bde4db65ce3f4269c1ac,
         type: 3}
       propertyPath: timeBetweenBullets
-      value: 0.5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2052582483702057421, guid: 1b7e91f66e94bde4db65ce3f4269c1ac,
         type: 3}
@@ -1869,7 +1869,7 @@ PrefabInstance:
     - target: {fileID: 2052582483702057421, guid: 1b7e91f66e94bde4db65ce3f4269c1ac,
         type: 3}
       propertyPath: timeBetweenBullets
-      value: 0.5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2052582483702057421, guid: 1b7e91f66e94bde4db65ce3f4269c1ac,
         type: 3}
@@ -2045,7 +2045,7 @@ PrefabInstance:
     - target: {fileID: 2052582483702057421, guid: 1b7e91f66e94bde4db65ce3f4269c1ac,
         type: 3}
       propertyPath: timeBetweenBullets
-      value: 1
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2052582483702057421, guid: 1b7e91f66e94bde4db65ce3f4269c1ac,
         type: 3}
@@ -2221,7 +2221,7 @@ PrefabInstance:
     - target: {fileID: 2052582483702057421, guid: 1b7e91f66e94bde4db65ce3f4269c1ac,
         type: 3}
       propertyPath: timeBetweenBullets
-      value: 0.5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2052582483702057421, guid: 1b7e91f66e94bde4db65ce3f4269c1ac,
         type: 3}

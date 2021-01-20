@@ -4,20 +4,24 @@ using UnityEngine;
 
 public class LookAt : MonoBehaviour
 {
-    GameObject target;
+    public Transform target;
+
+    Vector3 Startrotation;
+    Quaternion Rotation;
 
     // Start is called before the first frame update
     void Start()
     {
-        target = GameObject.Find("Center");
+
+        transform.LookAt(target.transform.position, target.transform.up);
     }
 
     // Update is called once per frame
     void Update()
  
     {
-        Vector3 targetPos = target.transform.position;
-        targetPos.z = transform.position.z;
-        transform.LookAt(targetPos);
+        /*Vector3 targetPos = target.transform.rotation;
+        targetPos.z = transform.rotation.z;
+        transform.LookAt(targetPos);*/
     }
 }

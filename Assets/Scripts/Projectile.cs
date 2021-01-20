@@ -6,6 +6,7 @@ public class Projectile : MonoBehaviour
 {
     public GameObject projectile;
     public float speed = 3f;
+    
     public AudioSource Explosion; 
 
     // Start is called before the first frame update
@@ -15,10 +16,12 @@ public class Projectile : MonoBehaviour
     }
 
     // Update is called once per frame
+    //Projectile firing direction and speed
     void Update()
     {
         transform.position += (+speed * Time.deltaTime * transform.up); 
     }
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Projectile collision with enemies
