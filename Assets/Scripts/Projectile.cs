@@ -19,7 +19,7 @@ public class Projectile : MonoBehaviour
     //Projectile firing direction and speed
     void Update()
     {
-        transform.position += (+speed * Time.deltaTime * transform.up); 
+        transform.position -= (+speed * Time.deltaTime * transform.up); 
     }
     
     private void OnCollisionEnter2D(Collision2D collision)
