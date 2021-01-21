@@ -144,4 +144,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyProjectile: {fileID: 7687659760150459152}
-  speed: 3
+  speed: 5
