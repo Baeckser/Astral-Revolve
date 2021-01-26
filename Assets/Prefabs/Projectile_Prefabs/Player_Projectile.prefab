@@ -98,6 +98,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 7687659760150459152}
   speed: 50
+  damage: 1
+  direction: 1
   Explosion: {fileID: -5749359895719331892}
 --- !u!61 &4179432423752357958
 BoxCollider2D:
@@ -112,7 +114,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0033537447, y: 0.000000059604645}
+  m_Offset: {x: -0.0023316145, y: -0.001065731}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -123,7 +125,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1274421, y: 1.0553366}
+  m_Size: {x: 1.0137346, y: 1.0063002}
   m_EdgeRadius: 0
 --- !u!82 &-5749359895719331892
 AudioSource:

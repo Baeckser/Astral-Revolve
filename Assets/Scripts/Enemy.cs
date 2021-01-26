@@ -15,48 +15,51 @@ public class Enemy : MonoBehaviour
     public float timeTilNextShot;
     public float startDelay = 2.5f;
 
-    //public int HitPoints = 100;
-    //private int Damage = -1;
+    public int maxEnemyHitPoints = 100;
+    public int curEnemyHitPoints;
 
     // Start is called before the first frame update
     void Start()
     {
         timeTilNextShot = Time.realtimeSinceStartup + startDelay;
+        curEnemyHitPoints = maxEnemyHitPoints;
     }
 
     // Update is called once per frame
-    //Enemy firing projectile
     private void Update()
     {
             if (Time.realtimeSinceStartup > timeTilNextShot)
                 fireEnemyProjectile();
-                //EnemyDeath();
+                EnemyDeath();
     }
+
+    //Enemy firing projectile
     void fireEnemyProjectile()
     {
-        Transform _guns = enemy_Guns[Guns];
-        Instantiate(enemyProjectile, _guns.position, transform.rotation);
+        Guns = 0;
+        foreach(Transform i in enemy_Guns)
+        {
+            Transform _guns = enemy_Guns[Guns];
+            Instantiate(enemyProjectile, _guns.position, transform.rotation);
+            Guns++;
+        }
         timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBullets;
     }
 
-    /*void EnemyDeath()
+    //Checking if the enemie has any HitPoints left
+    void EnemyDeath()
     {
-        if (HitPoints <= 0)
+        if (curEnemyHitPoints > 0)
         {
-            Destroy(enemy);
+            return;
         }
-    }*/
+        Debug.Log("Enemy was destroyed!");
+        Destroy(enemy);
+    } 
 
     //Despawning out of range enemies and collision with the Player
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        /*if (collision.gameObject.tag == "PlayerProjectile")
-        {
-            Debug.Log("Damage taken");
-            HitPoints += Damage;
-            Destroy(collision.gameObject);
-        }*/
-
         if (collision.gameObject.tag == "Despawn")
         {
             Destroy(enemy);

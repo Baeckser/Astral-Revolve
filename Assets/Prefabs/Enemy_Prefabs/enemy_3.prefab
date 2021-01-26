@@ -178,14 +178,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 6533887421391083706}
-  enemy_Gun: {fileID: 3835772170676779965}
+  enemy_Guns: []
   enemyProjectile: {fileID: 7687659760150459152, guid: 1707a68462bec4f498c748c6711a7540,
     type: 3}
   enemyProjectileClone: {fileID: 0}
   timeBetweenBullets: 1
   timeTilNextShot: 0
   startDelay: 2.5
-  HitPoints: 10
+  maxEnemyHitPoints: 10
+  curEnemyHitPoints: 100
 --- !u!114 &7164312309609990179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,3 +229,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3b2065b1fae7b3408002d49bdeb8661, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}

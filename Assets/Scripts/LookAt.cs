@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LookAt : MonoBehaviour
 {
-    GameObject target;
+    public GameObject target;
 
 
     // Start is called before the first frame update
@@ -14,13 +14,10 @@ public class LookAt : MonoBehaviour
     }
 
     // Update is called once per frame
+    //Enemy "looks" towards the Player-Ship relative to its position and rotation
     void Update()
  
     {
-        Vector3 targetPos = new Vector3(target.transform.position.x,
-                                       target.transform.position.y,
-                                       transform.position.z);
-            
-        transform.LookAt(targetPos);
+        transform.up = target.transform.position - transform.position;
     }
 }

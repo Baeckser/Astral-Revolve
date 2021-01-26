@@ -70,7 +70,7 @@ PrefabInstance:
     - target: {fileID: 6126108935840686814, guid: 11ec292681bad3c4e9dc04fdbbccf8b2,
         type: 3}
       propertyPath: m_Name
-      value: Wave_1.1_Level_1
+      value: Wave_1.1_Level_1 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6126108935840686814, guid: 11ec292681bad3c4e9dc04fdbbccf8b2,
         type: 3}
@@ -118,7 +118,7 @@ PrefabInstance:
     - target: {fileID: -3274206137852306854, guid: 1b7e91f66e94bde4db65ce3f4269c1ac,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2052582483702057421, guid: 1b7e91f66e94bde4db65ce3f4269c1ac,
         type: 3}
