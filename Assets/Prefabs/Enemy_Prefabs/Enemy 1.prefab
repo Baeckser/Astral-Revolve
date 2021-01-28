@@ -186,7 +186,7 @@ MonoBehaviour:
   timeBetweenBullets: 5
   timeTilNextShot: 0
   startDelay: 2.5
-  maxEnemyHitPoints: 10
+  maxEnemyHitPoints: 50
   curEnemyHitPoints: 100
 --- !u!114 &-3274206137852306854
 MonoBehaviour:
