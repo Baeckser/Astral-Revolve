@@ -9,11 +9,13 @@ public class Enemy : MonoBehaviour
     private int Guns = 0;
 
     public GameObject enemyProjectile;
+    public GameObject enemyProjectile_2;
     public GameObject enemyProjectileClone;
     
     public float timeBetweenBullets = 1f;
     public float timeTilNextShot;
     public float startDelay = 2.5f;
+    public float randomBulletRange = 3f;
 
     public int maxEnemyHitPoints = 100;
     public int curEnemyHitPoints;
@@ -33,17 +35,28 @@ public class Enemy : MonoBehaviour
                 EnemyDeath();
     }
 
-    //Enemy firing projectile
+    //Enemy firing projectile(s)
     void fireEnemyProjectile()
     {
         Guns = 0;
         foreach(Transform i in enemy_Guns)
         {
-            Transform _guns = enemy_Guns[Guns];
-            Instantiate(enemyProjectile, _guns.position, transform.rotation);
-            Guns++;
+            if (Random.Range(0f, randomBulletRange) < 1)
+            {
+                //Firing projectile_2(random)
+                Transform _guns = enemy_Guns[Guns];
+                Instantiate(enemyProjectile_2, _guns.position, transform.rotation);
+                Guns++;
+            }
+            else
+            {
+                //Firing projectile_1(timed)
+                Transform _guns = enemy_Guns[Guns];
+                Instantiate(enemyProjectile, _guns.position, transform.rotation);
+                Guns++;
+            }
+                timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBullets;
         }
-        timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBullets;
     }
 
     //Checking if the enemie has any HitPoints left

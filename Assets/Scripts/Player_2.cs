@@ -7,7 +7,11 @@ public class Player_2 : MonoBehaviour
     public GameObject player_2;
     public Transform Anchor;
     public Transform OneEighty;
-    
+
+    public static bool playGame = true;
+
+    public static int Continues = 3;
+
     public float speed = 5f;
     public float boost = 1.5f;
     public float throttle = 0.75f;

@@ -48,6 +48,13 @@ public class Projectile : MonoBehaviour
         {
             Destroy(projectile);    
         }
+
+        if (collision.gameObject.name == "Enemy_Projectile_2(Clone)")
+        {
+            Destroy(projectile);
+            Destroy(collision.gameObject);
+        }
+
     }
 
 }
