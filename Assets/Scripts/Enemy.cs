@@ -4,19 +4,24 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [Header("Enemy Base Stats")]
     public GameObject enemy;
     public Transform[] enemy_Guns;
     private int Guns = 0;
+    public int enemy_Value = 100;
 
+    [Header("Enemy Projectiles")]
     public GameObject enemyProjectile;
     public GameObject enemyProjectile_2;
     public GameObject enemyProjectileClone;
-    
+
+    [Header("Enemy Projectile Stats")]
     public float timeBetweenBullets = 1f;
     public float timeTilNextShot;
     public float startDelay = 2.5f;
     public float randomBulletRange = 3f;
 
+    [Header("Enemy Health Stats")]
     public int maxEnemyHitPoints = 100;
     public int curEnemyHitPoints;
 
@@ -30,9 +35,12 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if (Time.timeScale == 1f)
+        {
             if (Time.realtimeSinceStartup > timeTilNextShot)
                 fireEnemyProjectile();
-                EnemyDeath();
+            EnemyDeath();
+        }
     }
 
     //Enemy firing projectile(s)
@@ -43,19 +51,19 @@ public class Enemy : MonoBehaviour
         {
             if (Random.Range(0f, randomBulletRange) < 1)
             {
-                //Firing projectile_2(random)
-                Transform _guns = enemy_Guns[Guns];
-                Instantiate(enemyProjectile_2, _guns.position, transform.rotation);
-                Guns++;
+                    //Firing projectile_2(random)
+                    Transform _guns = enemy_Guns[Guns];
+                    Instantiate(enemyProjectile_2, _guns.position, transform.rotation);
+                    Guns++;
             }
             else
             {
-                //Firing projectile_1(timed)
-                Transform _guns = enemy_Guns[Guns];
-                Instantiate(enemyProjectile, _guns.position, transform.rotation);
-                Guns++;
+                    //Firing projectile_1(timed)
+                    Transform _guns = enemy_Guns[Guns];
+                    Instantiate(enemyProjectile, _guns.position, transform.rotation);
+                    Guns++;
             }
-                timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBullets;
+            timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBullets;
         }
     }
 
@@ -68,6 +76,7 @@ public class Enemy : MonoBehaviour
         }
         Debug.Log("Enemy was destroyed!");
         Destroy(enemy);
+        UIManager.manager.score += enemy_Value;
     } 
 
     //Despawning out of range enemies and collision with the Player
@@ -87,8 +96,6 @@ public class Enemy : MonoBehaviour
             {
                 temp.Respawn();
             }
-
-            GameManager.playGame = false;
         }
     }
 }

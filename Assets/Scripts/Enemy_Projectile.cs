@@ -26,7 +26,6 @@ public class Enemy_Projectile : MonoBehaviour
                 temp.Respawn();
             }
             Destroy(enemyProjectile);
-            GameManager.playGame = false;
         }
 
         //Destroying out of bounce projectiles
