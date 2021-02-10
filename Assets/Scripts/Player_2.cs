@@ -1,44 +1,55 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player_2 : MonoBehaviour
 {
+    [Header("Player Ship")]
     public GameObject player_2;
     public Transform Anchor;
     public Transform OneEighty;
 
-    public static bool playGame = true;
-
     public static int Continues = 3;
 
+    [Header("Player Stats")]
     public float speed = 5f;
     public float boost = 1.5f;
     public float throttle = 0.75f;
 
+    [Header("Weaponry")]
     public Transform Weapon;
     public Transform Weapon_2;
 
+    [Header("Player Projectiles")]
     public Projectile projectilePrefab;
 
+    [Header("Projectile Stats")]
     public float timeBetweenBullets_1 = 0.1f;
     public float timeBetweenBulletsRecharge = 0.5f;
     public float timeTilNextShot;
 
-    public int maxEnergy = 100;
-    public int curEnergy;
+    [Header("Energy Stats")]
+    public float maxEnergy = 100;
+    public float curEnergy;
+    public float consumeRate = 1;
+    public float refreshRate = 2;
+    public float rechargeRate = 1;
     public enum EnergyState
     {
         IdleState, ConsumingState, RechargeState, RefreshState
     }
     public EnergyState state;
-    
+
+    [Header("Player Sounds")]
+    public AudioSource Shot;
+
     Vector3 Startrotation;
     Quaternion Rotation;
 
-    public AudioSource Shot;
     private void Start()
     {
+        Time.timeScale = 1f;
         curEnergy = maxEnergy;
         Rotation = OneEighty.rotation;
         Startrotation = OneEighty.rotation.eulerAngles;
@@ -56,10 +67,14 @@ public class Player_2 : MonoBehaviour
     }
     void Update()
     {
-        movement();
-        if(Time.realtimeSinceStartup > timeTilNextShot)
-        fireProjectile();
-        oneEighty();
+        if (Time.timeScale == 1f)
+        {
+            movement();
+            if (Time.realtimeSinceStartup > timeTilNextShot)
+                fireProjectile();
+            oneEighty();
+        }    
+            Continue();        
     }
 
     //Moving the Player ship
@@ -113,7 +128,7 @@ public class Player_2 : MonoBehaviour
         //Energy usage while boosting
         if (state == EnergyState.ConsumingState)
         {
-            curEnergy -= 1;
+            curEnergy -= consumeRate;
         }
 
         if (Input.GetKey(KeyCode.LeftShift) == false)
@@ -140,14 +155,14 @@ public class Player_2 : MonoBehaviour
         //Normal Recharge(fast)
         if (state == EnergyState.RefreshState)
         {
-            curEnergy += 2;
+            curEnergy += refreshRate;
         }
        
         //Recharge after complete exhaustion of the Player-Ships Energy(slow)
-        if(state == EnergyState.RechargeState)
+        if(state == EnergyState.RechargeState && (Input.GetKey(KeyCode.LeftShift) == false))
         {
             Debug.Log("Recharge");
-            curEnergy += 1;
+            curEnergy += rechargeRate;            
         }
     }
     
@@ -189,12 +204,48 @@ public class Player_2 : MonoBehaviour
         }
     }
 
-    //Respawn location
+    //Respawn
     public void Respawn()
     {
+        //pausing the game after being hit
+        Time.timeScale = 0f;
+
+        //Loosing a life
+        Continues -= 1;
+
+        //Resetting the Energy Bar upon respawning
+        state = EnergyState.IdleState;
+        curEnergy = maxEnergy;
+            
+        //Respawn location
+        Debug.Log("Respawn");
         Debug.Log(Anchor.rotation);
+        
         //Anchor.Rotate(Startrotation);
         Anchor.rotation = Rotation;
+        
+    }
+    
+    //Continue playing after respawn
+    public void Continue()
+    {
+        if (Continues > 0)
+        {
+            if (Time.timeScale == 0f)
+            {
+                if (Input.GetKeyDown(KeyCode.RightArrow) || (Input.GetKeyDown(KeyCode.LeftArrow) || (Input.GetKeyDown(KeyCode.Space))))
+                {
+                    Debug.Log("Continue");
+                    Time.timeScale = 1f;
+                }
+            }
+        }
+        else
+        {
+            GameOver.GameIsLost = true;
+            Time.timeScale = 0f;
+            return;
+        }
     }
 
 }
