@@ -1,0 +1,329 @@
+fileFormatVersion: 2
+guid: 053ef4b4bb47e89459afbc5eb12a2c06
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6472197529877006561
+    second: Planet_2_Sprites_Scaled_50_0
+  - first:
+      213: -8815577529028508241
+    second: Planet_2_Sprites_Scaled_50_1
+  - first:
+      213: 2681774441649067165
+    second: Planet_2_Sprites_Scaled_50_2
+  - first:
+      213: 3206499447164628536
+    second: Planet_2_Sprites_Scaled_50_3
+  - first:
+      213: -1500013917870781099
+    second: Planet_2_Sprites_Scaled_50_4
+  - first:
+      213: -3749643260037867170
+    second: Planet_2_Sprites_Scaled_50_5
+  - first:
+      213: -7711843299065932846
+    second: Planet_2_Sprites_Scaled_50_6
+  - first:
+      213: -7762784707724442531
+    second: Planet_2_Sprites_Scaled_50_7
+  - first:
+      213: -8043194405721122308
+    second: Planet_2_Sprites_Scaled_50_8
+  - first:
+      213: 3725511938382988564
+    second: Planet_2_Sprites_Scaled_50_9
+  - first:
+      213: -5701119338385918314
+    second: Planet_2_Sprites_Scaled_50_10
+  - first:
+      213: 5519212512401111431
+    second: Planet_2_Sprites_Scaled_50_11
+  - first:
+      213: 6942201838265878714
+    second: Planet_2_Sprites_Scaled_50_12
+  - first:
+      213: 2258747809406661150
+    second: Planet_2_Sprites_Scaled_50_13
+  - first:
+      213: -2364098797338972378
+    second: Planet_2_Sprites_Scaled_50_14
+  - first:
+      213: 509452844201682810
+    second: Planet_2_Sprites_Scaled_50_15
+  - first:
+      213: -2781365904158741534
+    second: Planet_2_Sprites_Scaled_50_16
+  - first:
+      213: -4145458601783739619
+    second: Planet_2_Sprites_Scaled_50_17
+  - first:
+      213: 8710826187808157525
+    second: Planet_2_Sprites_Scaled_50_18
+  - first:
+      213: 131177371519457791
+    second: Planet_2_Sprites_Scaled_50_19
+  - first:
+      213: -108552863146675992
+    second: Planet_2_Sprites_Scaled_50_20
+  - first:
+      213: -3842255143465860108
+    second: Planet_2_Sprites_Scaled_50_21
+  - first:
+      213: -4024335392764472118
+    second: Planet_2_Sprites_Scaled_50_22
+  - first:
+      213: 4807498985642541897
+    second: Planet_2_Sprites_Scaled_50_23
+  - first:
+      213: -8357128884327256200
+    second: Planet_2_Sprites_Scaled_50_24
+  - first:
+      213: 3461933283443072634
+    second: Planet_2_Sprites_Scaled_50_25
+  - first:
+      213: 8673777590784965969
+    second: Planet_2_Sprites_Scaled_50_26
+  - first:
+      213: 6750042641846025924
+    second: Planet_2_Sprites_Scaled_50_27
+  - first:
+      213: 8396181919333847376
+    second: Planet_2_Sprites_Scaled_50_28
+  - first:
+      213: 4784761578734076004
+    second: Planet_2_Sprites_Scaled_50_29
+  - first:
+      213: -4792030100362946324
+    second: Planet_2_Sprites_Scaled_50_30
+  - first:
+      213: -8033589404081271481
+    second: Planet_2_Sprites_Scaled_50_31
+  - first:
+      213: -419551862582343577
+    second: Planet_2_Sprites_Scaled_50_32
+  - first:
+      213: 8761083028812836304
+    second: Planet_2_Sprites_Scaled_50_33
+  - first:
+      213: 3413381717846343599
+    second: Planet_2_Sprites_Scaled_50_34
+  - first:
+      213: 4996245940647050026
+    second: Planet_2_Sprites_Scaled_50_35
+  - first:
+      213: -3550784627957612791
+    second: Planet_2_Sprites_Scaled_50_36
+  - first:
+      213: -7016544234161763029
+    second: Planet_2_Sprites_Scaled_50_37
+  - first:
+      213: 8821598962792644963
+    second: Planet_2_Sprites_Scaled_50_38
+  - first:
+      213: 4339617050419497459
+    second: Planet_2_Sprites_Scaled_50_39
+  - first:
+      213: -6081698109742449629
+    second: Planet_2_Sprites_Scaled_50_40
+  - first:
+      213: -7461435449931049263
+    second: Planet_2_Sprites_Scaled_50_41
+  - first:
+      213: 5738523207775029636
+    second: Planet_2_Sprites_Scaled_50_42
+  - first:
+      213: -1950243358493555681
+    second: Planet_2_Sprites_Scaled_50_43
+  - first:
+      213: 7713177426095634649
+    second: Planet_2_Sprites_Scaled_50_44
+  - first:
+      213: -7126145071514187945
+    second: Planet_2_Sprites_Scaled_50_45
+  - first:
+      213: -3382530340357443075
+    second: Planet_2_Sprites_Scaled_50_46
+  - first:
+      213: 5801795482770436271
+    second: Planet_2_Sprites_Scaled_50_47
+  - first:
+      213: -3673290177532816677
+    second: Planet_2_Sprites_Scaled_50_48
+  - first:
+      213: -4449812313444269548
+    second: Planet_2_Sprites_Scaled_50_49
+  - first:
+      213: 4578787569179281582
+    second: Planet_2_Sprites_Scaled_50_50
+  - first:
+      213: 6176823467549436602
+    second: Planet_2_Sprites_Scaled_50_51
+  - first:
+      213: -1692829955506952298
+    second: Planet_2_Sprites_Scaled_50_52
+  - first:
+      213: -1855091302366830252
+    second: Planet_2_Sprites_Scaled_50_53
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Planet_2_Sprites_Scaled_50_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 300
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f17358343a22e26a0800000000000000
+      internalID: -6472197529877006561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Planet_2_Sprites_Scaled_50_1
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 300
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa5075cb1f6c8a580800000000000000
+      internalID: -8815577529028508241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Planet_2_Sprites_Scaled_50_2
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 300
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d94d63265a3973520800000000000000
+      internalID: 2681774441649067165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 15c5c71b5eb0968408fde57969cb8a3a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
