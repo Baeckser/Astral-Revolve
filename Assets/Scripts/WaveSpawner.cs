@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
 {
-    public enum SpawnState { spawning, waiting, counting, finished };
+    public enum SpawnState { spawning, waiting, counting };
 
     [System.Serializable]
     public class Wave
@@ -42,29 +42,32 @@ public class WaveSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(state == SpawnState.waiting)
+        if (Time.timeScale == 1f)
         {
-            Debug.Log(EnemyIsAlive());
-            if (!EnemyIsAlive())
+            if (state == SpawnState.waiting)
             {
-                WaveCompleted();
+                Debug.Log(EnemyIsAlive());
+                if (!EnemyIsAlive())
+                {
+                    WaveCompleted();
+                }
+                else
+                {
+                    return;
+                }
+            }
+
+            if (waveCountdown <= 0)
+            {
+                if (state != SpawnState.spawning)
+                {
+                    StartCoroutine(SpawnWave(waves[nextWave]));
+                }
             }
             else
             {
-                return;
+                waveCountdown -= Time.deltaTime;
             }
-        }
-
-        if(waveCountdown <= 0)
-        {
-            if(state != SpawnState.spawning)
-            {
-                StartCoroutine(SpawnWave(waves[nextWave]));
-            }
-        }
-        else
-        {
-            waveCountdown -= Time.deltaTime;
         }
     }
 
@@ -78,8 +81,9 @@ public class WaveSpawner : MonoBehaviour
 
         if (nextWave + 1 > waves.Length - 1)
         {
-            state = SpawnState.finished;
             Debug.Log("All Waves Complete!");
+            Win_Menu.GameIsWon = true;
+            return;
         }
         else
         {

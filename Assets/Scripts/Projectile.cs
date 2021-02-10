@@ -40,7 +40,6 @@ public class Projectile : MonoBehaviour
             Debug.Log("damage");
             collision.gameObject.GetComponent<Enemy>().curEnemyHitPoints -= damage;//Dealing damage to enemies
             Destroy(projectile);
-            GameManager.playGame = true;
             Explosion.Play();
         }
         //Destroying out of bounce projectiles
@@ -53,6 +52,7 @@ public class Projectile : MonoBehaviour
         {
             Destroy(projectile);
             Destroy(collision.gameObject);
+            UIManager.manager.score += 10;
         }
 
     }
