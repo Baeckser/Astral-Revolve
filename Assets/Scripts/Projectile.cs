@@ -37,7 +37,6 @@ public class Projectile : MonoBehaviour
         //Projectile collision with enemies
         if(collision.gameObject.tag == "Enemy")
         {
-            Debug.Log("damage");
             collision.gameObject.GetComponent<Enemy>().curEnemyHitPoints -= damage;//Dealing damage to enemies
             Destroy(projectile);
             Explosion.Play();

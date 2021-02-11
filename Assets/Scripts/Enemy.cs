@@ -25,6 +25,9 @@ public class Enemy : MonoBehaviour
     public int maxEnemyHitPoints = 100;
     public int curEnemyHitPoints;
 
+    //[Header("Enemy Sounds")]
+    //public AudioSource Enemy_Shot;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,6 +58,7 @@ public class Enemy : MonoBehaviour
                     Transform _guns = enemy_Guns[Guns];
                     Instantiate(enemyProjectile_2, _guns.position, transform.rotation);
                     Guns++;
+                    //Enemy_Shot.Play();
             }
             else
             {
@@ -62,6 +66,7 @@ public class Enemy : MonoBehaviour
                     Transform _guns = enemy_Guns[Guns];
                     Instantiate(enemyProjectile, _guns.position, transform.rotation);
                     Guns++;
+                    //Enemy_Shot.Play();
             }
             timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBullets;
         }
@@ -74,7 +79,6 @@ public class Enemy : MonoBehaviour
         {
             return;
         }
-        Debug.Log("Enemy was destroyed!");
         Destroy(enemy);
         UIManager.manager.score += enemy_Value;
     } 

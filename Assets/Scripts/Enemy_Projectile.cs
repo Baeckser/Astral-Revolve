@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy_Projectile : MonoBehaviour
 {
     public GameObject enemyProjectile;
+    GameObject[] objs;
     public float speed = 5f;
     
 
@@ -26,6 +27,12 @@ public class Enemy_Projectile : MonoBehaviour
                 temp.Respawn();
             }
             Destroy(enemyProjectile);
+            objs = GameObject.FindGameObjectsWithTag("EnemyProjectile");
+
+            foreach (GameObject enemy_projectiles in objs)
+            {
+                Destroy(enemy_projectiles);
+            }
         }
 
         //Destroying out of bounce projectiles

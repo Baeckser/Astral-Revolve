@@ -49,7 +49,7 @@ public class Player_2 : MonoBehaviour
 
     private void Start()
     {
-        Time.timeScale = 1f;
+        Continues = 3;
         curEnergy = maxEnergy;
         Rotation = OneEighty.rotation;
         Startrotation = OneEighty.rotation.eulerAngles;
@@ -161,7 +161,6 @@ public class Player_2 : MonoBehaviour
         //Recharge after complete exhaustion of the Player-Ships Energy(slow)
         if(state == EnergyState.RechargeState && (Input.GetKey(KeyCode.LeftShift) == false))
         {
-            Debug.Log("Recharge");
             curEnergy += rechargeRate;            
         }
     }
@@ -216,9 +215,8 @@ public class Player_2 : MonoBehaviour
         //Resetting the Energy Bar upon respawning
         state = EnergyState.IdleState;
         curEnergy = maxEnergy;
-            
+
         //Respawn location
-        Debug.Log("Respawn");
         Debug.Log(Anchor.rotation);
         
         //Anchor.Rotate(Startrotation);
@@ -231,11 +229,10 @@ public class Player_2 : MonoBehaviour
     {
         if (Continues > 0)
         {
-            if (Time.timeScale == 0f)
+            if (Time.timeScale == 0f && PauseMenu.GameIsPaused == false)
             {
                 if (Input.GetKeyDown(KeyCode.RightArrow) || (Input.GetKeyDown(KeyCode.LeftArrow) || (Input.GetKeyDown(KeyCode.Space))))
                 {
-                    Debug.Log("Continue");
                     Time.timeScale = 1f;
                 }
             }

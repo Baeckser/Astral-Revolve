@@ -48,6 +48,7 @@ public class UIManager : MonoBehaviour
     private void Update()
     {
         int health = playerHealth;
+        playerHealth = Player_2.Continues;
         // if less icons are there as should be
         while (health > iconInstances.Count)
         {

@@ -20,12 +20,10 @@ public class Win_Menu : MonoBehaviour
         if (GameIsWon == true)
         {
             WinMenuUI.SetActive(true);
-            Time.timeScale = 0f;
         }
         else
         {
             WinMenuUI.SetActive(false);
-            Time.timeScale = 1f;
         }
     }
 
@@ -33,7 +31,14 @@ public class Win_Menu : MonoBehaviour
     {
         GameIsWon = false;
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if ((SceneManager.GetActiveScene().buildIndex + 1) > 2)
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
         WinMenuUI.SetActive(false);
     }
 
@@ -41,13 +46,11 @@ public class Win_Menu : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
-        Debug.Log("Loading Menu");
         WinMenuUI.SetActive(false);
     }
 
     public void QuitGame()
     {
-        Debug.Log("Quitting Game");
         Application.Quit();
     }
 

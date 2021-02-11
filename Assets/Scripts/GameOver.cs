@@ -20,12 +20,10 @@ public class GameOver : MonoBehaviour
        if(GameIsLost == true)
        {
             GameOverUI.SetActive(true);
-            Time.timeScale = 0f;
        }        
        else
        {
             GameOverUI.SetActive(false);
-            Time.timeScale = 1f;
        }
     }
 
@@ -41,12 +39,10 @@ public class GameOver : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
-        Debug.Log("Loading Menu");
     }
 
     public void QuitGame()
     {
-        Debug.Log("Quitting Game");
         Application.Quit();
     }
 }

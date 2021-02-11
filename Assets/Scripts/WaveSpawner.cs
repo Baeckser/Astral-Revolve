@@ -99,7 +99,6 @@ public class WaveSpawner : MonoBehaviour
             searchCountdown = 1f;
             if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
             {
-                Debug.Log("Enemy is alive");
                 return false;
             }
         }
