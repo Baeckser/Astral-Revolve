@@ -20,6 +20,7 @@ public class Win_Menu : MonoBehaviour
         if (GameIsWon == true)
         {
             WinMenuUI.SetActive(true);
+            Time.timeScale = 0f;
         }
         else
         {

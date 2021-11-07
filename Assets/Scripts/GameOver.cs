@@ -20,6 +20,7 @@ public class GameOver : MonoBehaviour
        if(GameIsLost == true)
        {
             GameOverUI.SetActive(true);
+            Time.timeScale = 0f;
        }        
        else
        {
