@@ -6,6 +6,8 @@ public class Projectile : MonoBehaviour
 {
     public GameObject projectile;
     public float speed = 3f;
+    public float lifetime = 3f;
+    public float currentTime;
 
     public int damage = 1;
     public int direction = 1;
@@ -15,7 +17,7 @@ public class Projectile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentTime = lifetime;
     }
 
     // Update is called once per frame
@@ -30,6 +32,15 @@ public class Projectile : MonoBehaviour
         {
             transform.position += (+speed * Time.deltaTime * transform.up);
         }
+
+        currentTime -= 1 * Time.deltaTime;
+    
+        {
+            if (currentTime <= 0f)
+            {
+                Destroy(projectile);
+            }
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -41,7 +52,7 @@ public class Projectile : MonoBehaviour
             Destroy(projectile);
             Explosion.Play();
         }
-        //Destroying out of bounce projectiles
+        //Destroying out of bound projectiles
         if(collision.gameObject.tag == "Finish")
         {
             Destroy(projectile);    

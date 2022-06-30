@@ -20,6 +20,9 @@ public class Player_2 : MonoBehaviour
     [Header("Weaponry")]
     public Transform Weapon;
     public Transform Weapon_2;
+    public Transform Weapon_3;
+    public Transform Weapon_4;
+    public Transform Weapon_5;
 
     [Header("Player Projectiles")]
     public Projectile projectilePrefab;
@@ -77,7 +80,7 @@ public class Player_2 : MonoBehaviour
             Continue();        
     }
 
-    //Moving the Player ship
+    //Movement
     void movement()
     {
         if (state == EnergyState.IdleState || state == EnergyState.ConsumingState || state == EnergyState.RefreshState)
@@ -133,11 +136,11 @@ public class Player_2 : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift) == false)
         {
-            if (curEnergy >= 100)
+            if (curEnergy >= maxEnergy)
             {
                 state = EnergyState.IdleState;
             }
-            if (state != EnergyState.RechargeState && curEnergy < 100) 
+            if (state != EnergyState.RechargeState && curEnergy < maxEnergy) 
             {
                 state = EnergyState.RefreshState;
             }
@@ -146,7 +149,7 @@ public class Player_2 : MonoBehaviour
         if (curEnergy <= 0)
         {
             state = EnergyState.RechargeState;
-            if (curEnergy >= 100)
+            if (curEnergy >= maxEnergy)
             {
                 state = EnergyState.IdleState;
             }
@@ -176,7 +179,7 @@ public class Player_2 : MonoBehaviour
     }
 
    
-    //Using the Player weapon(s)
+    //Shooting
     void fireProjectile()
     {
         if (state == EnergyState.IdleState || state == EnergyState.ConsumingState || state == EnergyState.RefreshState)
@@ -186,6 +189,12 @@ public class Player_2 : MonoBehaviour
                 Instantiate(projectilePrefab, Weapon.position, Anchor.rotation);
                 timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBullets_1;
                 Instantiate(projectilePrefab, Weapon_2.position, Anchor.rotation);
+                timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBullets_1;
+                Instantiate(projectilePrefab, Weapon_3.position, Anchor.rotation);
+                timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBullets_1;
+                Instantiate(projectilePrefab, Weapon_4.position, Anchor.rotation);
+                timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBullets_1;
+                Instantiate(projectilePrefab, Weapon_5.position, Anchor.rotation);
                 timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBullets_1;
                 Shot.Play();
             }
@@ -197,6 +206,12 @@ public class Player_2 : MonoBehaviour
                 Instantiate(projectilePrefab, Weapon.position, Anchor.rotation);
                 timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBulletsRecharge;
                 Instantiate(projectilePrefab, Weapon_2.position, Anchor.rotation);
+                timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBulletsRecharge;
+                Instantiate(projectilePrefab, Weapon_3.position, Anchor.rotation);
+                timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBulletsRecharge;
+                Instantiate(projectilePrefab, Weapon_4.position, Anchor.rotation);
+                timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBulletsRecharge;
+                Instantiate(projectilePrefab, Weapon_5.position, Anchor.rotation);
                 timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBulletsRecharge;
                 Shot.Play();
             }

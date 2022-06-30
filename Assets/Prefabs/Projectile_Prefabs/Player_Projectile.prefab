@@ -97,7 +97,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 7687659760150459152}
-  speed: 80
+  speed: 160
+  lifetime: 2
+  currentTime: 0
   damage: 1
   direction: -1
   Explosion: {fileID: -5749359895719331892}
