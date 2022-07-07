@@ -25,6 +25,8 @@ public class UIManager : MonoBehaviour
     private Vector3 iconOffset = Vector3.zero;
     private List<GameObject> iconInstances;
 
+    private bool playerMouse_check;
+
     private void Awake()
     {
         manager = this;
@@ -36,13 +38,35 @@ public class UIManager : MonoBehaviour
         iconInstances = new List<GameObject>();
 
         player_2 = GameObject.Find("Player_2");
-        energy_Bar.maxValue = player_2.GetComponent<Player_2>().maxEnergy;
-        energy_Bar.value = player_2.GetComponent<Player_2>().maxEnergy;
+        if(player_2 == null)
+        {
+            playerMouse_check = true;
+            player_2 = GameObject.Find("Player_Mouse");
+        }
+        if (player_2.GetComponent<Player_2>()!=null)
+        {
+            energy_Bar.maxValue = player_2.GetComponent<Player_2>().maxEnergy;
+            energy_Bar.value = player_2.GetComponent<Player_2>().maxEnergy;
+        }
+        else 
+        {
+            playerMouse_check = true;
+            energy_Bar.maxValue = player_2.GetComponent<Player_Mouse>().maxEnergy;
+            energy_Bar.value = player_2.GetComponent<Player_Mouse>().maxEnergy;
+        }
+
     }
 
     public void FixedUpdate()
     {
-        energy_Bar.value = player_2.GetComponent<Player_2>().curEnergy;
+        if (playerMouse_check == false)
+        {
+            energy_Bar.value = player_2.GetComponent<Player_2>().curEnergy;
+        }
+        else
+        {
+            energy_Bar.value = player_2.GetComponent<Player_Mouse>().curEnergy;
+        }
     }
 
     private void Update()

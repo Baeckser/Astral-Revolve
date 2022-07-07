@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8703370575037587152}
   - component: {fileID: 7415187207899668659}
   - component: {fileID: 1226153282025744639}
+  - component: {fileID: 6768097462537917754}
   m_Layer: 0
   m_Name: Player_2
   m_TagString: Untagged
@@ -152,6 +153,7 @@ MonoBehaviour:
   throttle: 0.75
   Weapon: {fileID: 0}
   Weapon_2: {fileID: 0}
+  Weapon_3: {fileID: 0}
   projectilePrefab: {fileID: 2489258730082390219, guid: 96e253aed46905c4f9b365b2a655568a,
     type: 3}
   timeBetweenBullets_1: 0.01
@@ -281,3 +283,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6768097462537917754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3359574572822603357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c87f5a6773a8df4e9e087a9bf966f70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

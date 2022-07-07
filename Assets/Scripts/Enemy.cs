@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
     public GameObject enemy;
     public Transform[] enemy_Guns;
     private int Guns = 0;
+    
+    [Header("Score")]
     public int enemy_Value = 100;
 
     [Header("Enemy Projectiles")]

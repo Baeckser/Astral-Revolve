@@ -18,11 +18,8 @@ public class Player_2 : MonoBehaviour
     public float throttle = 0.75f;
 
     [Header("Weaponry")]
-    public Transform Weapon;
-    public Transform Weapon_2;
-    public Transform Weapon_3;
-    public Transform Weapon_4;
-    public Transform Weapon_5;
+    public Transform[] Weapons;
+    private int weapons = 0;
 
     [Header("Player Projectiles")]
     public Projectile projectilePrefab;
@@ -182,38 +179,30 @@ public class Player_2 : MonoBehaviour
     //Shooting
     void fireProjectile()
     {
-        if (state == EnergyState.IdleState || state == EnergyState.ConsumingState || state == EnergyState.RefreshState)
+        weapons = 0;
+        foreach (Transform i in Weapons)
         {
-            if (Input.GetKey(KeyCode.Space))
+            if (state == EnergyState.IdleState || state == EnergyState.ConsumingState || state == EnergyState.RefreshState)
             {
-                Instantiate(projectilePrefab, Weapon.position, Anchor.rotation);
-                timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBullets_1;
-                Instantiate(projectilePrefab, Weapon_2.position, Anchor.rotation);
-                timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBullets_1;
-                Instantiate(projectilePrefab, Weapon_3.position, Anchor.rotation);
-                timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBullets_1;
-                Instantiate(projectilePrefab, Weapon_4.position, Anchor.rotation);
-                timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBullets_1;
-                Instantiate(projectilePrefab, Weapon_5.position, Anchor.rotation);
-                timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBullets_1;
-                Shot.Play();
+                if (Input.GetKey(KeyCode.Space))
+                {
+                    Transform _weapons = Weapons[weapons];
+                    Instantiate(projectilePrefab, _weapons.position, Anchor.rotation);
+                    weapons++;
+                    timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBullets_1;
+                    Shot.Play();
+                }
             }
-        }
-        else
-        {
-            if (Input.GetKey(KeyCode.Space))
+            else
             {
-                Instantiate(projectilePrefab, Weapon.position, Anchor.rotation);
-                timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBulletsRecharge;
-                Instantiate(projectilePrefab, Weapon_2.position, Anchor.rotation);
-                timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBulletsRecharge;
-                Instantiate(projectilePrefab, Weapon_3.position, Anchor.rotation);
-                timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBulletsRecharge;
-                Instantiate(projectilePrefab, Weapon_4.position, Anchor.rotation);
-                timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBulletsRecharge;
-                Instantiate(projectilePrefab, Weapon_5.position, Anchor.rotation);
-                timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBulletsRecharge;
-                Shot.Play();
+                if (Input.GetKey(KeyCode.Space))
+                {
+                    Transform _weapons = Weapons[weapons];
+                    Instantiate(projectilePrefab, _weapons.position, Anchor.rotation);
+                    weapons++;
+                    timeTilNextShot = Time.realtimeSinceStartup + timeBetweenBulletsRecharge;
+                    Shot.Play();
+                }
             }
         }
     }
