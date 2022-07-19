@@ -151,9 +151,7 @@ MonoBehaviour:
   speed: 50
   boost: 1.5
   throttle: 0.75
-  Weapon: {fileID: 0}
-  Weapon_2: {fileID: 0}
-  Weapon_3: {fileID: 0}
+  Weapons: []
   projectilePrefab: {fileID: 2489258730082390219, guid: 96e253aed46905c4f9b365b2a655568a,
     type: 3}
   timeBetweenBullets_1: 0.01

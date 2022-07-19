@@ -152,7 +152,7 @@ MonoBehaviour:
   - {fileID: 1033153940499960720}
   projectilePrefab: {fileID: 7160188901488485806, guid: 59dae47dc41d6564fa00a2d676e14676,
     type: 3}
-  timeBetweenBullets: 0
+  timeBetweenBullets: 0.01
   timeBetweenBulletsRecharge: 0.5
   timeTilNextShot: 0
 --- !u!114 &-2473233815997094404
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7512595388871546937}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e245bdd3a9a01eb428c3b983f77718e1, type: 3}
   m_Name: 

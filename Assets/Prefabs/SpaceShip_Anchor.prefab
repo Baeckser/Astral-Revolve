@@ -136,7 +136,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3446617462819060378}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b48e8598ee77eb43bca47db60106010, type: 3}
   m_Name: 
@@ -623,6 +623,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6768097462537917754, guid: 23270f8580e7890498eb13ea1f4ef484,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8703370575037587152, guid: 23270f8580e7890498eb13ea1f4ef484,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -658,8 +663,7 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3359574573916365946, guid: 23270f8580e7890498eb13ea1f4ef484, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23270f8580e7890498eb13ea1f4ef484, type: 3}
 --- !u!1 &3446617462819060378 stripped
 GameObject:
